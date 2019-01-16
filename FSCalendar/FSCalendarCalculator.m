@@ -31,8 +31,6 @@
 
 @implementation FSCalendarCalculator
 
-@dynamic gregorian,minimumDate,maximumDate;
-
 - (instancetype)initWithCalendar:(FSCalendar *)calendar
 {
     self = [super init];
@@ -281,6 +279,18 @@
     [self.monthHeads removeAllObjects];
     [self.weeks removeAllObjects];
     [self.rowCounts removeAllObjects];
+}
+
+- (NSCalendar *)gregorian {
+    return [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+}
+
+- (NSDate *)minimumDate {
+    return [NSDate dateWithTimeIntervalSince1970:0];
+}
+
+- (NSDate *)maximumDate {
+    return [NSDate dateWithTimeIntervalSince1970:4102358400];
 }
 
 #pragma mark - Private functinos

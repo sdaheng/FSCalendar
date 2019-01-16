@@ -161,8 +161,8 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
     _currentPage = [self.gregorian fs_firstDayOfMonth:_today];
     
     
-    _minimumDate = [self.formatter dateFromString:@"1970-01-01"];
-    _maximumDate = [self.formatter dateFromString:@"2099-12-31"];
+    _minimumDate = [NSDate dateWithTimeIntervalSince1970:0];
+    _maximumDate = [NSDate dateWithTimeIntervalSince1970:4102358400];;
     
     _headerHeight     = FSCalendarAutomaticDimension;
     _weekdayHeight    = FSCalendarAutomaticDimension;
