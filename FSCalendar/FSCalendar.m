@@ -157,7 +157,7 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
     _firstWeekday = 1;
     [self invalidateDateTools];
     
-    _today = [self.gregorian dateBySettingHour:0 minute:0 second:0 ofDate:[NSDate date] options:0];
+    _today = [NSDate date];
     _currentPage = [self.gregorian fs_firstDayOfMonth:_today];
     
     
